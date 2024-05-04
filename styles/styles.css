@@ -1,3 +1,25 @@
+/*
+Kode program ini digunakan untuk mendefinisikan gaya visual dari elemen-elemen pada halaman web.
+
+1. Reset CSS:
+   - Mengatur semua elemen agar memiliki margin, padding, dan box-sizing yang seragam, sehingga menghilangkan perbedaan default styling antar browser.
+
+2. Variabel CSS:
+   - Mendefinisikan variabel-variabel warna, ukuran border radius, dan shadow yang dapat digunakan kembali di seluruh file CSS untuk memudahkan pengelolaan tema dan gaya.
+
+3. Mode Terang:
+   - Menyediakan alternatif tema warna yang lebih terang untuk website, yang dapat diaktifkan dengan menambahkan 'light-mode' pada elemen body.
+
+4. Styling Body:
+   - Mengatur warna latar belakang, jenis font, ukuran font, dan warna teks untuk elemen body. Juga termasuk transisi untuk animasi yang halus saat terjadi perubahan tema.
+
+5. Styling Link:
+   - Mengatur tampilan dasar untuk semua link, termasuk menghilangkan garis bawah dan menetapkan tampilan blok.
+
+Kode program ini  penting untuk memastikan konsistensi dan keindahan visual dari website, serta mendukung kemudahan dalam pengelolaan tema dan adaptasi gaya di berbagai bagian website.
+*/
+
+
 * {
   margin: 0;
   padding: 0;
