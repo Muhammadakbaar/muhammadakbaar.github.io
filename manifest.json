@@ -61,10 +61,6 @@
             "protocol": "web+pwa",
             "url": "/?url=%s"
         }
-    ],
-    "window_controls_overlay": {
-        "custom_layout": true,
-        "hide_in_fullscreen": false
-    }
+    ]
     
 }
