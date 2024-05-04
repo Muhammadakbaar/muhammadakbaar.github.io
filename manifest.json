@@ -55,5 +55,11 @@
             "form_factor": "narrow",
             "label": "Background"
         }
+    ],
+    "protocol_handlers": [
+        {
+            "protocol": "web+pwa",
+            "url": "/?url=%s"
+        }
     ]
 }
