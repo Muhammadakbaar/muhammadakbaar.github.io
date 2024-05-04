@@ -1,4 +1,4 @@
-# Web application portofolio
+<h1 align="center">Web application portofolio</h1>
 
  ``` 
  Aplikasi ini menggunakan HTML, CSS, dan JavaScript untuk menciptakan tampilan yang responsif dan interaktif.
