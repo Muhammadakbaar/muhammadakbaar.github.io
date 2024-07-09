@@ -58,12 +58,28 @@ self.addEventListener('fetch', event => {
     caches.match(event.request)
       .then(response => {
         if (response) {
-          return response;
+          return response; // Mengembalikan respons dari cache jika tersedia
         }
-        return fetch(event.request).catch(error => {
-          console.error('Fetch failed:', error);
-          throw error;
-        });
+        // Jika tidak ada di cache, ambil dari jaringan
+        return fetch(event.request)
+          .then(fetchResponse => {
+            if (!fetchResponse || fetchResponse.status !== 200 || fetchResponse.type !== 'basic') {
+              return fetchResponse;
+            }
+
+            const responseToCache = fetchResponse.clone();
+            caches.open(CACHE_NAME)
+              .then(cache => {
+                cache.put(event.request, responseToCache); // Menyimpan respons ke cache
+              });
+
+            return fetchResponse;
+          })
+          .catch(error => {
+            console.error('Fetch failed:', error);
+            throw error;
+          });
       })
   );
 });
+
